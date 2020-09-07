@@ -9,6 +9,7 @@
     border-radius: 10px;
 }
 .user-container .user-info .user-data {
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 16px;
@@ -17,6 +18,8 @@
 .user-container .user-info .user-data .user-img {
     width: 50px;
     height: 50px;
+
+    flex-shrink: 0;
 
     border-radius: 50%;
     background-color: #222632;
@@ -27,6 +30,8 @@
     margin-left: 16px;
 }
 .user-container .user-info .user-data .user-vip {
+    flex-shrink: 0;
+
     width: 10px;
     height: 10px;
     border-radius: 50rem;
@@ -34,8 +39,16 @@
     background-color: gold;
 }
 .user-container .user-info .user-data .user-schedule {
+    top: 0;
+    left: 0;
+
+    position: relative;
+    transition: 200ms ease;
+    transition-property: left, top;
+
     margin-left: 30px;
 }
+
 .user-container .user-info .user-data .user-schedule .user-date {
     letter-spacing: 1px;
 
@@ -46,7 +59,166 @@
     font-size: 10px;
     color: gray;
 }
-.user-container .user-info .user-message{
+.user-container .user-info .user-data .user-learn-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.user-container .user-info .user-data .user-learn-more .user-bullets {
+    cursor: pointer;
+
+    top: 7px;
+    right: 7px;
+    position: absolute;
+
+    display: flex;
+
+    width: 25px;
+    height: 25px;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-bullets.active
+    ~ .user-deleted {
+    display: block;
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-bullets
+    .user-bullet {
+    width: 5px;
+    height: 5px;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 50rem;
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-bullets
+    .user-bullet.n1 {
+    background-color: #d90429;
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-bullets
+    .user-bullet.n2 {
+    background-color: #ff4500;
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-bullets
+    .user-bullet.n3 {
+    background-color: #ffe66d;
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 30px 10px;
+
+    background-color: #f1f8ff;
+    color: #8d99ae;
+
+    user-select: none;
+
+    font-size: 14px;
+
+    width: 170px;
+    position: absolute;
+
+    display: none;
+    top: -11px;
+    right: -170px;
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted span .user-icon {
+    margin-right: 8px;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted span .user-icon.n1{
+    background-color: #d90429;
+
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted span .user-icon.n2{
+    background-color: #ff4500;
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted::after,
+.user-container .user-info .user-data .user-learn-more .user-deleted::before {
+    content: '';
+
+    border: 1px solid #ddd;
+    background-color: #f0f8ff;
+    position: absolute;
+
+    transform: rotate(45deg);
+    width: 15px;
+    height: 15px;
+
+    border-radius: 2px;
+    top: 20px;
+    left: -7.5px;
+    z-index: -1;
+
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted::after{
+    z-index: 1;
+    top: 21px;
+    left: -6.5px;
+    border: none;
+}
+.user-container .user-info .user-data .user-learn-more .user-deleted span {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    padding: 5px 6px;
+
+    width: 100%;
+    border-radius: 10px;
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-deleted
+    span:hover {
+
+    cursor: pointer;
+    color: #57607e;
+}
+.user-container .user-info .user-message {
     font-size: 14px;
     margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 409px) {
+    /* nome do usuário */
+    .user-container .user-info .user-data .user-name {
+        font-size: max(12px, 3.6vw);
+    }
+
+    /* hora / data */
+    .user-container .user-info .user-data .user-schedule {
+        top: -25px;
+        left: -25px;
+    }
+    .user-container d.user-info .user-data .user-schedule .user-date {
+        font-size: 9px;
+    }
 }
