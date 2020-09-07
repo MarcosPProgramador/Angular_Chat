@@ -1,0 +1,20 @@
+<div class="user-container">
+    <div class="user-info" *ngFor="let item of lists">
+        <div class="user-data">
+            <div class="user-img"></div>
+            <div class="user-name">{{ item.name }}</div>
+
+            <div class="user-vip" *ngIf="item.vip">
+
+
+            </div>
+            <div class="user-schedule">
+                <div class="user-date">{{ item.date }}</div>
+                <div class="user-hours">{{ item.hours }}</div>
+
+            </div>
+
+        </div>
+        <div class="user-message">{{ item.message }}</div>
+    </div>
+</div>

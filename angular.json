@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-clit"
+    }
+  },
+  "defaultProject": "angular-clit",
+  "cli": {
+    "analytics": "56da658c-fa78-46e8-ac76-39f1c6e574af"
+  }
 }

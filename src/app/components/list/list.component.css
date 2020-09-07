@@ -1,0 +1,52 @@
+.user-container {
+    max-width: 500px;
+}
+.user-container .user-info {
+    padding: 30px 15px;
+
+    margin-right: 20px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+}
+.user-container .user-info .user-data {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.user-container .user-info .user-data .user-img {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: #222632;
+}
+.user-container .user-info .user-data .user-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 16px;
+}
+.user-container .user-info .user-data .user-vip {
+    width: 10px;
+    height: 10px;
+    border-radius: 50rem;
+    margin-left: 7px;
+    background-color: gold;
+}
+.user-container .user-info .user-data .user-schedule {
+    margin-left: 30px;
+}
+.user-container .user-info .user-data .user-schedule .user-date {
+    letter-spacing: 1px;
+
+    font-size: 13px;
+    color: #8d99ae;
+}
+.user-container .user-info .user-data .user-schedule .user-hours {
+    font-size: 10px;
+    color: gray;
+}
+.user-container .user-info .user-message{
+    font-size: 14px;
+    margin-left: 20px;
+}
