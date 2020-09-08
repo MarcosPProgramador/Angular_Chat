@@ -1,3 +1,4 @@
+import { ApiService } from './components/list/api.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,7 @@ import { ListComponent } from './components/list/list.component';
 @NgModule({
     declarations: [AppComponent, ListComponent],
     imports: [BrowserModule, AppRoutingModule],
-    providers: [],
+    providers: [ApiService],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
