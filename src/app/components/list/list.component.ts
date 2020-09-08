@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
             {
                 id: 1,
                 name: 'João Gonalve',
-                message: 'E aí seu otário',
+                message: 'E aí seu lixo',
                 date: '07/09/2020',
                 hours: '10:16',
                 vip: false,
@@ -45,6 +45,24 @@ export class ListComponent implements OnInit {
                 vip: true,
                 show: true,
             },
+            {
+                id: 4,
+                name: 'Gabriel Jesus',
+                message: 'KKKKKKKKKKKKKKKKKKKKKKKKKKKK, o cara foi removido',
+                date: '07/09/2020',
+                hours: '18:32',
+                vip: false,
+                show: true,
+            },
+            {
+                id: 5,
+                name: 'Jhonata Luiz',
+                message: 'Roooi, Joana né?',
+                date: '07/09/2020',
+                hours: '18:39',
+                vip: true,
+                show: true,
+            },
         ];
 
     }
@@ -52,7 +70,7 @@ export class ListComponent implements OnInit {
         e.currentTarget.classList.toggle('active');
     }
     deleteComment(){
-        
+
     }
 
     ngOnInit(): void {}

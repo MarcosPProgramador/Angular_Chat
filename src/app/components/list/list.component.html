@@ -1,34 +1,48 @@
-<div class="user-container">
-    <div class="user-loop" *ngFor="let item of lists">
-        <div *ngIf="item.show" class="user-info">
-            <div class="user-data">
-                <div class="user-img"></div>
-                <div class="user-name">{{ item.name }}</div>
+<div class="user-all">
+    <div class="user-container">
+        <div class="user-loop" *ngFor="let item of lists">
+            <ng-container *ngIf="item.show; else elseTemplate">
+                <div class="user-info">
+                    <div class="user-data">
+                        <div class="user-img"></div>
+                        <div class="user-name">{{ item.name }}</div>
 
-                <div class="user-vip" *ngIf="item.vip"></div>
-                <div class="user-schedule">
-                    <div class="user-date">{{ item.date }}</div>
-                    <div class="user-hours">{{ item.hours }}</div>
-                </div>
-                <div class="user-learn-more">
-                    <div class="user-bullets" (click)="userClick($event)">
-                        <span class="user-bullet n1"></span>
-                        <span class="user-bullet n2"></span>
-                        <span class="user-bullet n3"></span>
+                        <div class="user-vip" title="Este usuário é VIP" *ngIf="item.vip"></div>
+                        <div class="user-schedule">
+                            <div class="user-date">{{ item.date }}</div>
+                            <div class="user-hours">{{ item.hours }}</div>
+                        </div>
+                        <div class="user-learn-more">
+                            <div
+                                class="user-bullets"
+                                (click)="userClick($event)"
+                            >
+                                <span class="user-bullet n1"></span>
+                                <span class="user-bullet n2"></span>
+                                <span class="user-bullet n3"></span>
+                            </div>
+                            <div class="user-deleted">
+                                <span>
+                                    <div class="user-icon n1"></div>
+                                    <p>Banir usuário</p>
+                                </span>
+                                <span (click)="deleteComment($event)">
+                                    <div class="user-icon n2"></div>
+                                    <p>Excluir comentário</p>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="user-deleted">
-                        <span>
-                            <div class="user-icon n1"></div>
-                            <p>Banir usuário</p>
-                        </span>
-                        <span (click)="deleteComment($event)">
-                            <div class="user-icon n2"></div>
-                            <p>Excluir comentário</p>
-                        </span>
-                    </div>
+                    <div class="user-message">{{ item.message }}</div>
                 </div>
-            </div>
-            <div class="user-message">{{ item.message }}</div>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <div class="user-comment-removed">Comentário removido</div>
+            </ng-template>
         </div>
+    </div>
+    <div class="user-comment">
+        <input type="text" placeholder="Digite um comentário"/>
+        <button type="submit">Enviar</button>
     </div>
 </div>

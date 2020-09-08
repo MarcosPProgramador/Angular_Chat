@@ -1,5 +1,9 @@
 .user-container {
-    max-width: 500px;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .user-container .user-info {
     padding: 30px 15px;
@@ -129,7 +133,7 @@
     border-radius: 20px;
     padding: 30px 10px;
 
-    background-color: #f1f8ff;
+    background-color: #fff;
     color: #8d99ae;
 
     user-select: none;
@@ -141,28 +145,50 @@
 
     display: none;
     top: -11px;
-    right: -170px;
+    right: 60px;
 }
-.user-container .user-info .user-data .user-learn-more .user-deleted span .user-icon {
+@media (max-width: 320px) {
+    .user-container .user-info .user-data .user-learn-more .user-deleted {
+        right: 33px;
+    }
+}
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-deleted
+    span
+    .user-icon {
     margin-right: 8px;
 
     width: 10px;
     height: 10px;
     border-radius: 50%;
 }
-.user-container .user-info .user-data .user-learn-more .user-deleted span .user-icon.n1{
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-deleted
+    span
+    .user-icon.n1 {
     background-color: #d90429;
-
 }
-.user-container .user-info .user-data .user-learn-more .user-deleted span .user-icon.n2{
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-deleted
+    span
+    .user-icon.n2 {
     background-color: #ff4500;
 }
 .user-container .user-info .user-data .user-learn-more .user-deleted::after,
 .user-container .user-info .user-data .user-learn-more .user-deleted::before {
-    content: '';
+    content: "";
 
     border: 1px solid #ddd;
-    background-color: #f0f8ff;
+    background-color: #fff;
     position: absolute;
 
     transform: rotate(45deg);
@@ -171,14 +197,13 @@
 
     border-radius: 2px;
     top: 20px;
-    left: -7.5px;
+    right: -7.5px;
     z-index: -1;
-
 }
-.user-container .user-info .user-data .user-learn-more .user-deleted::after{
+.user-container .user-info .user-data .user-learn-more .user-deleted::after {
     z-index: 1;
     top: 21px;
-    left: -6.5px;
+    right: -6.5px;
     border: none;
 }
 .user-container .user-info .user-data .user-learn-more .user-deleted span {
@@ -197,7 +222,6 @@
     .user-learn-more
     .user-deleted
     span:hover {
-
     cursor: pointer;
     color: #57607e;
 }
@@ -206,7 +230,54 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+.user-container .user-comment-removed {
+    user-select: none;
+    margin-top: 20px;
+    color: #d90429;
+    border: 1px solid #d90429;
 
+    border-radius: 10px;
+    padding: 10px 3%;
+    text-align: center;
+}
+.user-all {
+    max-width: 600px;
+    position: relative;
+}
+.user-all .user-comment {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border-top-right-radius: 50rem;
+    width: 90%;
+}
+.user-all .user-comment button,
+.user-all .user-comment input{
+    padding: 12px 40px;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    border: 0;
+
+}
+.user-all .user-comment input{
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+
+
+}
+.user-all .user-comment button{
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    background-color: #222632;
+    color: #8d99ae;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 7px;
+}
 @media (max-width: 409px) {
     /* nome do usuário */
     .user-container .user-info .user-data .user-name {
