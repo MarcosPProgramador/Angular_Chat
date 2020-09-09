@@ -7,7 +7,11 @@
                         <div class="user-img"></div>
                         <div class="user-name">{{ item.name }}</div>
 
-                        <div class="user-vip" title="Este usuário é VIP" *ngIf="item.vip"></div>
+                        <div
+                            class="user-vip"
+                            title="Este usuário é VIP"
+                            *ngIf="item.vip"
+                        ></div>
                         <div class="user-schedule">
                             <div class="user-date">{{ item.date }}</div>
                             <div class="user-hours">{{ item.hours }}</div>
@@ -22,11 +26,12 @@
                                 <span class="user-bullet n3"></span>
                             </div>
                             <div class="user-deleted">
+                                <div class="user-overback"></div>
                                 <span>
                                     <div class="user-icon n1"></div>
                                     <p>Banir usuário</p>
                                 </span>
-                                <span (click)="deleteComment($event)">
+                                <span>
                                     <div class="user-icon n2"></div>
                                     <p>Excluir comentário</p>
                                 </span>
@@ -42,7 +47,7 @@
         </div>
     </div>
     <div class="user-comment">
-        <input type="text" placeholder="Digite um comentário"/>
+        <input type="text" placeholder="Digite um comentário" />
         <button type="submit">Enviar</button>
     </div>
 </div>

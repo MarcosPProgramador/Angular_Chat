@@ -147,11 +147,33 @@
     top: -11px;
     right: 60px;
 }
+.user-container .user-info .user-data .user-learn-more .user-deleted .user-overback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: transparent;
+    border-radius: 20px;
+
+
+}
 @media (max-width: 320px) {
     .user-container .user-info .user-data .user-learn-more .user-deleted {
         right: 33px;
     }
 }
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-deleted
+    span{
+        position: relative;
+        z-index: 1;
+
+    }
 .user-container
     .user-info
     .user-data

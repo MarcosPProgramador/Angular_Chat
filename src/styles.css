@@ -21,6 +21,7 @@ body {
     min-width: 260px;
 }
 body {
+    border: 1px solid #000;
     overflow-x: hidden;
     background-color: #fff;
 }

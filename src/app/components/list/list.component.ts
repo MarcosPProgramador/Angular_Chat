@@ -8,14 +8,13 @@ import { List } from '../../models/app.list';
 })
 export class ListComponent implements OnInit {
     lists: List[];
-
     constructor(private apiService: ApiService) {
         this.lists = this.apiService.getApi();
     }
-
     userClick(e) {
         e.currentTarget.classList.toggle('active');
     }
+
     deleteComment() {}
 
     ngOnInit(): void {}
