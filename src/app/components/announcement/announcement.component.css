@@ -1,6 +1,17 @@
 .container-all {
     overflow-y: auto;
     height: 100vh;
+
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #8d99ae #fff;
+}
+.container-all::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+.container-all::-webkit-scrollbar-thumb{
+    background-color: #8d99ae;
 }
 .container-all .container {
     border: 2px solid #8d99ae;
