@@ -6,21 +6,15 @@
     <ul class="report-user">
         <h2>
             Usuários Reportados
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="black"
-                width="18px"
-                height="18px"
-            >
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
-                />
-            </svg>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">play_for_work</mat-icon>
+
         </h2>
         <li class="report-el" *ngFor="let item of ListUser">
-            {{ item.name }}
+
+            <span>
+                <mat-icon title="Delete" aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+                {{ item.name }}
+            </span>
             <ng-container *ngIf="item.report <= 50; else elseTemplate">
                 <span class="report-bullet lvl-01">
                     <p>{{ item.report }}</p>

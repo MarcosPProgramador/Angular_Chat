@@ -9,15 +9,18 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { UsersOnComponent } from './components/users-on/users-on.component';
 import { AnnouncementComponent } from './components/announcement/announcement.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
     declarations: [
+
         AppComponent,
         ListComponent,
         UsersOnComponent,
         AnnouncementComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule],
+    imports: [BrowserModule, AppRoutingModule, NoopAnimationsModule, MatIconModule],
     providers: [ApiService, ApiOnService],
     bootstrap: [AppComponent],
 })

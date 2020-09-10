@@ -12,9 +12,8 @@ export class UsersOnComponent implements OnInit {
     constructor(private apiOnService: ApiOnService) {
         this.ListUser = this.apiOnService.getApi();
     }
-    addClass(e){
-        e.target.classList.toggle('active')
+    addClass(e) {
+        e.target.classList.toggle('active');
     }
     ngOnInit(): void {}
-
 }

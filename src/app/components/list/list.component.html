@@ -11,7 +11,11 @@
                             class="user-vip"
                             title="Este usuário é VIP"
                             *ngIf="item.vip"
-                        ></div>
+                        >
+                            <mat-icon aria-hidden="false"
+                                >verified_user</mat-icon
+                            >
+                        </div>
                         <div class="user-schedule">
                             <div class="user-date">{{ item.date }}</div>
                             <div class="user-hours">{{ item.hours }}</div>

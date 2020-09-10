@@ -1,23 +1,33 @@
-.element-mod{
+.element-mod {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+    background-color: rgba(250,250,250,.9);
     position: absolute;
+
+    padding: 7px 9px 32px;
     left: 50px;
-    bottom: 15px;
+    bottom: 0;
 }
-.element-mod h2{
+.element-mod h2 {
     font-weight: 500;
     color: #8d99ae;
 }
-.element-area{
+.element-mod h2 mat-icon{
+    position: relative;
+    top: 5px;
+}
+.element-area {
     margin: auto;
     max-width: 1280px;
 
     display: flex;
 }
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .element-mod {
         display: none;
     }
-    .element-area{
+    .element-area {
         display: block;
     }
 }
