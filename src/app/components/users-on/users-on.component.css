@@ -1,0 +1,100 @@
+.reports {
+    padding: 50px 20px;
+    margin-right: 20px;
+
+    width: 300px;
+    overflow-y: auto;
+
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #d90429 #fff;
+}
+.reports::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+.reports::-webkit-scrollbar-thumb {
+    background-color: #d90429;
+}
+.report-user {
+    display: flex;
+    flex-direction: column;
+}
+.report-user h2 {
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+    font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 50px;
+}
+.report-user h2 svg {
+    margin-left: 10px;
+}
+.report-user .report-el {
+    white-space: nowrap;
+    color: #222632;
+    padding: 7px 15px 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.report-user .report-el .report-bullet {
+    display: inline-flex;
+    color: #f0f8ff;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 50rem;
+
+}
+.report-user .report-el .report-bullet.lvl-01 {
+    flex-shrink: 0;
+    background-color: #ff4500;
+
+    width: 25px;
+    height: 25px;
+}
+.report-user .report-el .report-bullet p {
+    display: flex;
+
+    user-select: none;
+    margin: auto;
+}
+.report-user .report-el .report-bullet.lvl-02 {
+    background-color: #d90429;
+}
+.report-user .report-el .report-bullet.lvl-02 p {
+    padding: 0 5px 0 10px;
+    align-items: center;
+    justify-content: center;
+}
+.report-user .report-el .report-bullet.lvl-02 p svg {
+    margin-left: 6px;
+}
+@media (max-width: 800px) {
+    .reports {
+        width: 100%;
+        max-width: 280px;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(8px);
+    }
+    .report-user h2 {
+        color: #f0f8ff;
+    }
+    .report-user h2 svg {
+        fill: #f0f8ff;
+    }
+    .report-user .report-el {
+        color: #8f99ae;
+    }
+}

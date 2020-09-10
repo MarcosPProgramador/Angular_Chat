@@ -1,0 +1,6 @@
+.element-area{
+    margin: auto;
+    max-width: 1280px;
+    
+    display: flex;
+}

@@ -5,14 +5,13 @@
     box-sizing: border-box;
     font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     width: 7px;
     height: 7px;
 }
-*::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb {
     border-radius: 50rem;
     background-color: #222632;
-
 }
 html,
 body {
@@ -21,11 +20,10 @@ body {
     min-width: 260px;
 }
 body {
-    border: 1px solid #000;
     overflow-x: hidden;
     background-color: #fff;
 }
-img{
+img {
     width: 500px;
     height: 500px;
 }
