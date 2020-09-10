@@ -1,6 +1,8 @@
 .user-container {
     width: 100%;
+    max-width: 500px;
     height: 100vh;
+    padding-right: 20px;
     padding-bottom: 40px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -147,7 +149,12 @@
     top: -11px;
     right: 60px;
 }
-.user-container .user-info .user-data .user-learn-more .user-deleted .user-overback{
+.user-container
+    .user-info
+    .user-data
+    .user-learn-more
+    .user-deleted
+    .user-overback {
     position: absolute;
     top: 0;
     left: 0;
@@ -156,24 +163,16 @@
     z-index: 0;
     background-color: transparent;
     border-radius: 20px;
-
-
 }
 @media (max-width: 320px) {
     .user-container .user-info .user-data .user-learn-more .user-deleted {
         right: 33px;
     }
 }
-.user-container
-    .user-info
-    .user-data
-    .user-learn-more
-    .user-deleted
-    span{
-        position: relative;
-        z-index: 1;
-
-    }
+.user-container .user-info .user-data .user-learn-more .user-deleted span {
+    position: relative;
+    z-index: 1;
+}
 .user-container
     .user-info
     .user-data
@@ -277,22 +276,19 @@
     width: 90%;
 }
 .user-all .user-comment button,
-.user-all .user-comment input{
+.user-all .user-comment input {
     padding: 12px 40px;
     appearance: none;
     border: 0;
     outline: 0;
     border: 0;
-
 }
-.user-all .user-comment input{
+.user-all .user-comment input {
     border-radius: 5px;
     border: 1px solid #ddd;
     width: 100%;
-
-
 }
-.user-all .user-comment button{
+.user-all .user-comment button {
     cursor: pointer;
     border-top-left-radius: 5px;
     background-color: #222632;
@@ -301,8 +297,13 @@
     width: 150px;
     margin-left: 7px;
 }
+@media (max-width: 800px) {
+    .user-all {
+        margin: 0 auto;
+    }
+}
 @media (max-width: 409px) {
-    .user-all .user-comment button{
+    .user-all .user-comment button {
         padding-left: 10px;
         width: 70px;
     }

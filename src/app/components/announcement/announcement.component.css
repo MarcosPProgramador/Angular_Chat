@@ -1,0 +1,29 @@
+.container-all {
+    overflow-y: auto;
+    height: 100vh;
+}
+.container-all .container {
+    border: 2px solid #8d99ae;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: min(400px, 25vw);
+    height: min(300px, 20vw);
+
+    display: flex;
+}
+.container-all .container::before {
+    margin: auto;
+
+    font-weight: bold;
+    font-size: 26px;
+    color: #8d99ae75;
+    letter-spacing: 1px;
+
+    content: "Anúncio";
+}
+@media (max-width: 1010px) {
+    .container-all {
+        display: none;
+    }
+}

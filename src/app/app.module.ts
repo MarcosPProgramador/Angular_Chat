@@ -8,9 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { UsersOnComponent } from './components/users-on/users-on.component';
+import { AnnouncementComponent } from './components/announcement/announcement.component';
 
 @NgModule({
-    declarations: [AppComponent, ListComponent, UsersOnComponent],
+    declarations: [
+        AppComponent,
+        ListComponent,
+        UsersOnComponent,
+        AnnouncementComponent,
+    ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [ApiService, ApiOnService],
     bootstrap: [AppComponent],

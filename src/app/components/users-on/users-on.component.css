@@ -1,5 +1,46 @@
+.reports-burger {
+    background-color: rgba(255, 255, 255, 0.295);
+    cursor: pointer;
+
+    display: none;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    z-index: 10;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    transition: background-color 200ms 600ms;
+}
+.reports-burger span {
+    position: absolute;
+    display: block;
+
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    transition: 500ms transform cubic-bezier(0.075, 0.82, 0.165, 1), 500ms background-color ease 400ms;
+}
+.reports-burger span:nth-child(1) {
+    transform: translate3d(0, 15px, 0);
+}
+.reports-burger span:nth-child(2) {
+    transform: translate3d(0, 30px, 0);
+}
+.reports-burger.active{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.reports-burger.active span{
+    background-color: #f0f8ff;
+}
+.reports-burger.active span:nth-child(1) {
+    transform: translate3d(0, 25px, 0) rotate(45deg);
+}
+.reports-burger.active span:nth-child(2) {
+    transform: translate3d(0, 25px, 0) rotate(-45deg);
+}
 .reports {
-    padding: 50px 20px;
+    padding: 70px 20px 30px;
     margin-right: 20px;
 
     width: 300px;
@@ -51,7 +92,6 @@
     font-weight: bold;
     font-size: 12px;
     border-radius: 50rem;
-
 }
 .report-user .report-el .report-bullet.lvl-01 {
     flex-shrink: 0;
@@ -84,9 +124,16 @@
         z-index: 3;
         position: absolute;
         top: 0;
-        left: 0;
+        left: -290px;
         background-color: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(8px);
+        transition: 600ms left ease-in-out;
+    }
+    .reports-burger {
+        display: block;
+    }
+    .reports-burger.active ~ .reports {
+        left: 0;
     }
     .report-user h2 {
         color: #f0f8ff;
