@@ -13,9 +13,13 @@
     border-radius: 50rem;
     background-color: #222632;
 }
-*{
+* {
     scrollbar-width: thin;
     scrollbar-color: #222632 #fff;
+}
+::selection {
+    background-color: #bcd4ff;
+    color: #fff;
 }
 html,
 body {
