@@ -2,13 +2,14 @@
 
 ## Download the dependencies
 
-# ************\*\*\*\*************
+#### npm install -g @angular/cli
 
-### npm install -g @angular/cli
+#### ng new project-name
 
-### ng new project-name
+#### ng add @angular/material
 
-### ng add @angular/material
+#### ng serve -o
 
-### ng serve -o
+## Preview
 
+![alt](./img/layout.png)
