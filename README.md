@@ -13,3 +13,13 @@
 ## Preview
 
 ![alt](./img/layout.png)
+
+
+**Technologies used:**
+- _HTML_
+- _CSS_
+- _Angular material_
+- _TypeScript_
+- _Git_
+- _NPM_
+
